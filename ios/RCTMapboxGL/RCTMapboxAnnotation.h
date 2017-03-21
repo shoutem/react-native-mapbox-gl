@@ -3,8 +3,22 @@
 #import <Mapbox/Mapbox.h>
 #import <UIKit/UIKit.h>
 
+#if __has_include(<React/RCTConvert+MapKit.h>)
 #import <React/RCTConvert+MapKit.h>
+#elif __has_include("RCTConvert+MapKit.h")
+#import "RCTConvert+MapKit.h"
+#else
+#import "React/RCTConvert+MapKit.h"
+#endif
+
+#if __has_include(<React/RCTComponent.h>)
 #import <React/RCTComponent.h>
+#elif __has_include("RCTComponent.h")
+#import "RCTComponent.h"
+#else
+#import "React/RCTComponent.h"
+#endif
+
 #import "RCTMapboxGL.h"
 
 @class RCTBridge;

@@ -7,8 +7,23 @@
 //
 
 #import <Foundation/Foundation.h>
+
+#if __has_include(<React/RCTConvert+CoreLocation.h>)
 #import <React/RCTConvert+CoreLocation.h>
+#elif __has_include("RCTConvert+CoreLocation.h")
+#import "RCTConvert+CoreLocation.h"
+#else
+#import "React/RCTConvert+CoreLocation.h"
+#endif
+
+#if __has_include(<React/RCTConvert+MapKit.h>)
 #import <React/RCTConvert+MapKit.h>
+#elif __has_include("RCTConvert+MapKit.h")
+#import "RCTConvert+MapKit.h"
+#else
+#import "React/RCTConvert+MapKit.h"
+#endif
+
 #import "RCTMapboxGL.h"
 
 UIImage *imageFromSource (NSDictionary *source)

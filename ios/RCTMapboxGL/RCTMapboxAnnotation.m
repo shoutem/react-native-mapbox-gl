@@ -9,10 +9,37 @@
 
 #import "RCTMapboxAnnotation.h"
 
+#if __has_include(<React/RCTEventDispatcher.h>)
 #import <React/RCTEventDispatcher.h>
+#elif __has_include("RCTEventDispatcher.h")
+#import "RCTEventDispatcher.h"
+#else
+#import "React/RCTEventDispatcher.h"
+#endif
+
+#if __has_include(<React/UIView+React.h>)
 #import <React/UIView+React.h>
+#elif __has_include("UIView+React.h")
+#import "UIView+React.h"
+#else
+#import "React/UIView+React.h"
+#endif
+
+#if __has_include(<React/RCTBridge.h>)
 #import <React/RCTBridge.h>
+#elif __has_include("RCTBridge.h")
+#import "RCTBridge.h"
+#else
+#import "React/RCTBridge.h"
+#endif
+
+#if __has_include(<React/RCTUtils.h>)
 #import <React/RCTUtils.h>
+#elif __has_include("RCTUtils.h")
+#import "RCTUtils.h"
+#else
+#import "React/RCTUtils.h"
+#endif
 
 @implementation RCTMapboxAnnotation {
 }

@@ -7,9 +7,30 @@
 //
 
 #import <Mapbox/Mapbox.h>
+
+#if __has_include(<React/RCTView.h>)
 #import <React/RCTView.h>
+#elif __has_include("RCTView.h")
+#import "RCTView.h"
+#else
+#import "React/RCTView.h"
+#endif
+
+#if __has_include(<React/RCTEventDispatcher.h>)
 #import <React/RCTEventDispatcher.h>
+#elif __has_include("RCTEventDispatcher.h")
+#import "RCTEventDispatcher.h"
+#else
+#import "React/RCTEventDispatcher.h"
+#endif
+
+#if __has_include(<React/RCTBridgeModule.h>)
 #import <React/RCTBridgeModule.h>
+#elif __has_include("RCTBridgeModule.h")
+#import "RCTBridgeModule.h"
+#else
+#import "React/RCTBridgeModule.h"
+#endif
 
 @interface RCTMapboxGL : RCTView <MGLMapViewDelegate>
 

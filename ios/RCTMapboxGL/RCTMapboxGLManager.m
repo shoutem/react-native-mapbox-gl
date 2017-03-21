@@ -9,12 +9,55 @@
 #import "RCTMapboxGLManager.h"
 #import "RCTMapboxGL.h"
 #import <Mapbox/Mapbox.h>
+
+#if __has_include(<React/RCTConvert+CoreLocation.h>)
 #import <React/RCTConvert+CoreLocation.h>
+#elif __has_include("RCTConvert+CoreLocation.h)
+#import "RCTConvert+CoreLocation.h"
+#else
+#import "React/RCTConvert+CoreLocation.h"
+#endif
+
+#if __has_include(<React/RCTConvert+MapKit.h>)
 #import <React/RCTConvert+MapKit.h>
+#elif __has_include("RCTConvert+MapKit.h")
+#import "RCTConvert+MapKit.h"
+#else
+#import "React/RCTConvert+MapKit.h"
+#endif
+
+#if __has_include(<React/RCTBridge.h>)
 #import <React/RCTBridge.h>
+#elif __has_include("RCTBridge.h")
+#import "RCTBridge.h"
+#else
+#import "React/RCTBridge.h"
+#endif
+
+#if __has_include(<React/RCTEventDispatcher.h>)
 #import <React/RCTEventDispatcher.h>
+#elif __has_include("RCTEventDispatcher.h")
+#import "RCTEventDispatcher.h"
+#else
+#import "React/RCTEventDispatcher.h"
+#endif
+
+#if __has_include(<React/UIView+React.h>)
 #import <React/UIView+React.h>
+#elif __has_include("UIView+React.h")
+#import "UIView+React.h"
+#else
+#import "React/UIView+React.h"
+#endif
+
+#if __has_include(<React/RCTUIManager.h>)
 #import <React/RCTUIManager.h>
+#elif __has_include("RCTUIManager.h")
+#import "RCTUIManager.h"
+#else
+#import "React/RCTUIManager.h"
+#endif
+
 #import "RCTMapboxGLConversions.h"
 #import "MGLPolygon+RCTAdditions.h"
 #import "MGLPolyline+RCTAdditions.h"

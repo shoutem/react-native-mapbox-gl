@@ -7,10 +7,39 @@
 //
 
 #import "RCTMapboxGL.h"
+
+#if __has_include(<React/RCTBridgeModule.h>)
 #import <React/RCTBridgeModule.h>
+#elif __has_include("RCTBridgeModule.h")
+#import "RCTBridgeModule.h"
+#else
+#import "React/RCTBridgeModule.h"
+#endif
+
+#if __has_include(<React/RCTEventDispatcher.h>)
 #import <React/RCTEventDispatcher.h>
+#elif __has_include("RCTEventDispatcher.h")
+#import "RCTEventDispatcher.h"
+#else
+#import "React/RCTEventDispatcher.h"
+#endif
+
+#if __has_include(<React/UIView+React.h>)
 #import <React/UIView+React.h>
+#elif __has_include("UIView+React.h")
+#import "UIView+React.h"
+#else
+#import "React/UIView+React.h"
+#endif
+
+#if __has_include(<React/RCTLog.h>)
 #import <React/RCTLog.h>
+#elif __has_include("RCTLog.h")
+#import "RCTLog.h"
+#else
+#import "React/RCTLog.h"
+#endif
+
 #import "RCTMapboxGLConversions.h"
 #import "RCTMapboxAnnotation.h"
 
