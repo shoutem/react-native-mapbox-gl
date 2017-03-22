@@ -12,7 +12,7 @@
 
 #if __has_include(<React/RCTConvert+CoreLocation.h>)
 #import <React/RCTConvert+CoreLocation.h>
-#elif __has_include("RCTConvert+CoreLocation.h"")
+#elif __has_include("RCTConvert+CoreLocation.h")
 #import "RCTConvert+CoreLocation.h"
 #else
 #import "React/RCTConvert+CoreLocation.h"
