@@ -75,7 +75,7 @@ public class ReactNativeMapboxGLManager extends SimpleViewManager<ReactNativeMap
                 .put("onChangeUserTrackingMode", MapBuilder.of("registrationName", "onChangeUserTrackingMode"))
                 .put("onUpdateUserLocation", MapBuilder.of("registrationName", "onUpdateUserLocation"))
                 .put("onLongPressEvent", MapBuilder.of("registrationName", "onLongPressEvent"))
-                .put("onTap", MapBuilder.of("registrationName", "onTap"))
+                .put("onMapTap", MapBuilder.of("registrationName", "onMapTap"))
                 .put("onFinishLoadingMap", MapBuilder.of("registrationName", "onFinishLoadingMap"))
                 .put("onStartLoadingMap", MapBuilder.of("registrationName", "onStartLoadingMap"))
                 .put("onLocateUserFailed", MapBuilder.of("registrationName", "onLocateUserFailed"))

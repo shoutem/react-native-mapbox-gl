@@ -373,7 +373,7 @@ public class ReactNativeMapboxGLView extends RelativeLayout implements
 
     @Override
     public void onMapClick(LatLng point) {
-        emitEvent("onTap", serializePoint(point));
+        emitEvent("onMapTap", serializePoint(point));
     }
 
     @Override
